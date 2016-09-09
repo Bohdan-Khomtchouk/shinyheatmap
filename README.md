@@ -3,9 +3,9 @@
 ## About
 Purpose: To create user-friendly, highly customizable static and interactive biological heatmaps in a web browser.
 
-shinyheatmap is financially supported by the United States Department of Defense (DoD) through the National Defense Science and Engineering Graduate Fellowship (NDSEG) Program. This research was conducted with Government support under and awarded by DoD, Army Research Office (ARO), National Defense Science and Engineering Graduate (NDSEG) Fellowship, 32 CFR 168a.
+`shinyheatmap` is financially supported by the United States Department of Defense (DoD) through the National Defense Science and Engineering Graduate Fellowship (NDSEG) Program. This research was conducted with Government support under and awarded by DoD, Army Research Office (ARO), National Defense Science and Engineering Graduate (NDSEG) Fellowship, 32 CFR 168a.
 
-Please cite: "Khomtchouk BB, Wahlestedt C.  'shinyheatmap: advanced biological heatmap analysis software' (in preparation).  https://github.com/Bohdan-Khomtchouk/shinyheatmap" within any source that makes use of any methods inspired by shinyheatmap. 
+Please cite: "Khomtchouk BB, Wahlestedt C.  'shinyheatmap: advanced biological heatmap analysis software' (in preparation).  https://github.com/Bohdan-Khomtchouk/shinyheatmap" within any source that makes use of any methods inspired by `shinyheatmap`. 
 
 ## Usage (for general public)
 
