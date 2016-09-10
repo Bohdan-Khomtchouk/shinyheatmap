@@ -24,6 +24,8 @@ Please cite: "Khomtchouk BB, Wahlestedt C.  'shinyheatmap: advanced biological h
 * `setwd("~/path/to/my_directory/shinyheatmap")`
 * `install.packages("shiny")`
 * `library(shiny)`
+* `install.packages("data.table")`
+* `library(data.table)`
 * `install.packages("gplots")`
 * `library(gplots)`
 * `install.packages("heatmaply")`
