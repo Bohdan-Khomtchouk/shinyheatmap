@@ -14,7 +14,7 @@ library(tools)
 ui <- shinyUI(pageWithSidebar(
   headerPanel("shinyheatmap"),
   sidebarPanel(
-    helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/Microscope", target = "_blank")),
+    helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
     downloadButton("downloadData", label = "Download Sample Input File"),
     fileInput("filename", "Choose File to Upload:", accept = c('.csv')),
     selectInput("lowColor", "Low Value:", c("green", "blue", "purple", "red", "orange", "yellow")),
@@ -32,7 +32,7 @@ ui <- shinyUI(pageWithSidebar(
     tabsetPanel(
       tabPanel("Instructions", textOutput("text1"), img(src='excel.png'), textOutput("text2"), textOutput("text3"), textOutput("text4")),
       tabPanel("Static Heatmap", plotOutput("static", height = "600px")),
-      tabPanel("Interactive Heatmap", plotOutput("interactive"))
+      tabPanel("Interactive Heatmap", plotlyOutput("interactive"))
 	  ) 
   )
   ))

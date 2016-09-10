@@ -77,7 +77,7 @@ server <- shinyServer(function(input, output) {
   		})
   
   
-  output$interactive <- renderPlot({
+  output$interactive <- renderPlotly({
 		if(!is.null(datasetInput()))
       		interactiveHeatmap()
   	})
