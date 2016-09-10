@@ -4,7 +4,9 @@
 
 # ------------------------------------------------------------------------------------
 
+options(shiny.maxRequestSize=30*1024^2)
 library(shiny)
+library(data.table)
 library(gplots)
 library(heatmaply)
 library(tools)
@@ -14,18 +16,17 @@ server <- shinyServer(function(input, output) {
   
   # instructions tab
   output$text1 <- renderText({ "0) You can easily make a .csv file by simply saving your Microsoft Excel workbook as a .csv through 'Save As'.  Before saving as a .csv, your Excel file should look something like:" })
-  output$text2 <- renderText({ "Please note that all cell values must be positive (i.e., corresponding to raw gene expression values, i.e., read counts per gene per sample) from a ChIP-seq or RNA-seq experiment.  A sample .csv file is provided under the 'Download Sample Input File' button.  Press that button, save the file to your computer, then click the 'Choose File' button to upload it.  In offbeat cases where the input file is a combination of various standard (or non-standard) delimiters, simply use the 'Text to Columns' feature in Microsoft Excel under the 'Data' tab to parse the file before using MicroScope." })
-  output$text3 <- renderText({ "1) After uploading a .csv file, both a static and interactive heatmap will be produced in their respective panels.  You may customize your heatmap parameters and download the heatmaps to your computer." })
+  output$text2 <- renderText({ "Please note that all cell values must be positive (i.e., corresponding to raw gene expression values, i.e., read counts per gene per sample) from a ChIP-seq or RNA-seq experiment.  A sample .csv file is provided under the 'Download Sample Input File' button.  Press that button, save the file to your computer, then click the 'Choose File' button to upload it.  In offbeat cases where the input file is a combination of various standard (or non-standard) delimiters, simply use the 'Text to Columns' feature in Microsoft Excel under the 'Data' tab to parse the file before using shinyheatmap." })
+  output$text3 <- renderText({ "1) After uploading a .csv file, both a static and interactive heatmap will be produced in their respective panels.  You may customize your static heatmap parameters in the sidebar panel and download the heatmap to your computer.  Likewise, you may customize the interactive heatmap parameters in its own dedicated panel (located under the 'Interactive Heatmap' tab) and download your heatmap.  This 'Interactive Heatmap' tab is great for zooming in and out of the contents of the heatmaps (both from the interior of the heatmap, as well as from the dendrogram panes).  This is especially useful for finely examining extremely large biological input datasets of hundreds of thousands of rows." })
   output$text4 <- renderText({ "2) For more information about this software, please visit the shinyheatmap publication." })
-  
 
   # sample file download
   output$downloadData <- downloadHandler(
   	filename <- function() {
-    	paste('genes', '_file', '.csv', sep='')
+    	paste('genes', 'File', '.csv', sep='')
   	},
   	content <- function(file) {
-    	file.copy("genes_file.csv", file)
+    	file.copy("genesFile.csv", file)
   	},
   	contentType = "text/csv"
 	)
@@ -38,17 +39,17 @@ server <- shinyServer(function(input, output) {
     )
     inFile <- input$filename
     if (is.null(inFile)) return(NULL)
-    read.table(inFile$datapath, header = TRUE, sep = ",", quote = '"', stringsAsFactors = FALSE)
+    fread(inFile$datapath)
   })
   
   
   staticHeatmap <- reactive({
 		genexp <- datasetInput()
-   		names_genexp <- genexp[,1]
-   		genexp <- data.matrix(genexp[-1])
+   		names_genexp <- genexp[[1]]
+   		genexp <- genexp[, -1, with = FALSE]
    		row.names(genexp) <- names_genexp
    		heatmap.2(
-   				 genexp, 
+   				 data.matrix(genexp), 
    				 trace = input$trace, 
    				 scale = input$scale, 
    				 dendrogram = input$dendrogram, 
@@ -70,10 +71,10 @@ server <- shinyServer(function(input, output) {
   
   interactiveHeatmap <- reactive({
 		genexp <- datasetInput()
-   		names_genexp <- genexp[,1]
-   		genexp <- data.matrix(genexp[-1])
+   		names_genexp <- genexp[[1]]
+   		genexp <- genexp[, -1, with = FALSE]
    		row.names(genexp) <- names_genexp
-   		heatmaply(genexp, k_row = 3, k_col = 2)
+   		heatmaply(genexp, k_row = 30, k_col = 4)
   		})
   
   

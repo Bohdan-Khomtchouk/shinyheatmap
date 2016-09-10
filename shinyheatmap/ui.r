@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------------
 
 library(shiny)
+library(data.table)
 library(gplots)
 library(heatmaply)
 library(tools)
@@ -14,19 +15,19 @@ library(tools)
 ui <- shinyUI(pageWithSidebar(
   headerPanel("shinyheatmap"),
   sidebarPanel(
-    helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
-    downloadButton("downloadData", label = "Download Sample Input File"),
-    fileInput("filename", "Choose File to Upload:", accept = c('.csv')),
-    selectInput("lowColor", "Low Value:", c("green", "blue", "purple", "red", "orange", "yellow")),
-    selectInput("highColor", "High Value:", c("red", "orange", "yellow", "green", "blue", "purple")),    
-    selectInput("dendrogram", "Apply Clustering:", c("none", "row", "column", "both")),
-    selectInput("scale", "Apply Scaling:", c("row", "column", "none")),
-    selectInput("key", "Color Key:", c("TRUE", "FALSE")),    
-    selectInput("trace", "Make Trace:", c("none", "column", "row", "both")),
-    sliderInput("xfontsize", "Choose Y Font Size:", min = 0.3, max = 2, value = 0.5),
-    sliderInput("yfontsize", "Choose X Font Size:", min = 0.3, max = 2, value = 0.72),
-    downloadButton("downloadHeatmap", "Download Heatmap")
-  ),
+    	helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
+    	downloadButton("downloadData", label = "Download Sample Input File"),
+    	fileInput("filename", "Choose File to Upload:", accept = c('.csv')),
+    	selectInput("lowColor", "Low Value:", c("green", "blue", "purple", "red", "orange", "yellow")),
+    	selectInput("highColor", "High Value:", c("red", "orange", "yellow", "green", "blue", "purple")),    
+    	selectInput("dendrogram", "Apply Clustering:", c("none", "row", "column", "both")),
+    	selectInput("scale", "Apply Scaling:", c("row", "column", "none")),
+    	selectInput("key", "Color Key:", c("TRUE", "FALSE")),    
+    	selectInput("trace", "Make Trace:", c("none", "column", "row", "both")),
+    	sliderInput("xfontsize", "Choose Y Font Size:", min = 0.3, max = 2, value = 0.5),
+    	sliderInput("yfontsize", "Choose X Font Size:", min = 0.3, max = 2, value = 0.72),
+    	downloadButton("downloadHeatmap", "Download Heatmap")
+  	),
   
   mainPanel(
     tabsetPanel(
