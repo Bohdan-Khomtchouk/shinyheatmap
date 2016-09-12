@@ -24,6 +24,7 @@ The `shinyheatmap` publication is currently in preparation.  For now, please cit
 * `setwd("~/path/to/my_directory/shinyheatmap")`
 * `install.packages("shiny")`
 * `library(shiny)`
+* `library(shinyapps)`
 * `install.packages("data.table")`
 * `library(data.table)`
 * `install.packages("gplots")`
