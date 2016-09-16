@@ -1,0 +1,154 @@
+#bar-text{
+font-size: 19px;
+font-family:Verdana;
+font-weight:bold;
+position:relative;
+top: 3px;
+opacity:0.9;
+
+}
+
+#shinyTitle{
+font-family:Courgette;
+color:#FFF;
+font-size:25px;
+}
+
+
+logo{
+
+
+color: #FFFFFF;
+}
+
+td {
+  padding: 5px;
+}
+
+.modal-backdrop{
+background-color:transparent;
+}
+
+@media (min-width: 992px){
+
+#shiny-tab-DifferentialExpressionAnalysis {
+position:relative;
+bottom:25px;
+
+}
+#shiny-tab-SurvivalAnalysis{
+position:relative;
+bottom:25px;
+
+}
+#summaryBSModal > .modal-lg {
+    width: 1150px;/* 1317px; */
+    margin: 10px 0px 10px 70px !important;
+ }
+
+
+#downloadSet{
+	border-radius:2px;	
+	background-color: rgb(0, 38, 73);
+	color:white;
+
+ }
+input#fileUpload{
+	border-radius:2px;
+        background-color: rgb(0, 38, 73);
+        color:white;
+ }
+#ioAlert{
+	margin-top:5px;
+}
+}
+
+
+
+
+#tabBut{
+margin-top:5px;
+
+}
+#mergeGroupsButton{
+margin-bottom:5px;
+}
+#formatDEButton{
+margin-bottom:5px;
+}
+#DEadd{
+margin-bottom:5px;
+}
+
+#submitButton{
+position:relative;
+bottom:12px;
+height:35px;
+width:66px;
+
+}
+#submitPlatform{
+position:relative;
+bottom:13px;
+
+}
+#autoAnalysis{
+    position: relative;
+    padding: 5px;
+    margin-bottom:5px;
+}
+
+#genBtn{
+            position:relative;
+            float:right;
+            right:300px;       
+            bottom:5px; 
+}
+#manuBtn{
+            position:relative;
+            float:right;
+            margin-left:5px;
+            bottom:5px;
+            right: 285px;
+        }
+
+#formatDEButton2{
+padding:6px;
+margin-bottom:5px;
+}
+#Survadd{
+padding:5px;
+margin-bottom:5px;
+
+}
+.skin-blue .main-sidebar {
+  	background-color: rgb(0, 38, 73);
+    /*font-color: green;*/
+}
+
+.skin-blue .sidebar-menu li.active>a{
+  background-color: rgb(124,33,40);
+  
+}
+
+.skin-blue .sidebar-menu>li:hover>a {
+        background-color: rgb(124,33,40);
+      }
+
+.skin-blue .sidebar-menu>li>a {
+        color: white;
+}
+
+
+#ClinicalDataBtn{
+	margin-bottom:27px;
+	position:relative;
+	right:250px;
+
+}
+#selectedGroups{
+	position:relative;
+	top:12px;
+
+}
+
