@@ -2,6 +2,6 @@ name: shinyheatmap
 account: microscope
 server: shinyapps.io
 appId: 124881
-bundleId: 553800
+bundleId: 749048
 url: https://bohdankhomtchouk.shinyapps.io/shinyheatmap/
-when: 1473485648.34987
+when: 1489619534.87483
