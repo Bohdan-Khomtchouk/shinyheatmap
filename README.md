@@ -1,3 +1,13 @@
+<div align="center">
+
+# shinyheatmap
+
+<img src="https://user-images.githubusercontent.com/9893806/27997170-9c8f6cc2-64c0-11e7-8941-aae4b11619af.png">
+
+##### Web server for enormous biological heatmaps
+
+</div>
+
 # shinyheatmap
 
 ## About
