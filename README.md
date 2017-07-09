@@ -8,8 +8,6 @@
 
 </div>
 
-# shinyheatmap
-
 ## About
 Purpose: To create user-friendly, highly customizable static and interactive biological heatmaps of big datasets in a web browser.
 
