@@ -76,9 +76,9 @@ server <- shinyServer(function(input, output) {
 		genexp_df <- as.data.frame(genexp)
 		names_genexp_df <- genexp_df[,1]
 		n <- NROW(names_genexp_df)
-   		genexp_df_mat <- data.matrix(genexp_df[-1])
-   		k <- NCOL(genexp_df_mat)
-   		row.names(genexp_df_mat) <- names_genexp_df
+   	genexp_df_mat <<- data.matrix(genexp_df[-1])  ## make global for clusteredInput() function
+   	k <- NCOL(genexp_df_mat)
+   	row.names(genexp_df_mat) <<- names_genexp_df  ## make global for clusteredInput() function
    		if (n > 2000) {
    			output$image <- renderUI({
     			tags$img(src = "https://cloud.githubusercontent.com/assets/9893806/19628924/44e7168c-9937-11e6-9808-89452fbdd62d.png")
@@ -120,6 +120,24 @@ server <- shinyServer(function(input, output) {
         			staticHeatmap()
 			})		
   	})
+  
+  
+  # re-sort input file after hierarchical clustering (prep stage)
+  clusteredInput <- function(){
+    heatmap_object <- staticHeatmap()
+    genexp_df_mat[rev(heatmap_object$rowInd), heatmap_object$colInd]
+  }
+    
+  
+  # re-sort input file after hierarchical clustering (download stage)
+    output$downloadClusteredInput <- downloadHandler(
+      filename = function() {
+        paste(basename(file_path_sans_ext(input$filename)), '_clustered', '.csv', sep='')
+      },
+      content = function(file) {
+        write.csv(clusteredInput(), file)
+      }
+    )
   	
   
   # interactive heatmap prep

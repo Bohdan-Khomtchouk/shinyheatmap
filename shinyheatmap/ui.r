@@ -31,7 +31,8 @@ ui <- shinyUI(pageWithSidebar(
     	selectInput("trace", "Make Trace:", c("none", "column", "row", "both")),
     	sliderInput("xfontsize", "Choose Y Font Size:", min = 0.3, max = 2, value = 0.5),
     	sliderInput("yfontsize", "Choose X Font Size:", min = 0.3, max = 2, value = 0.72),
-    	downloadButton("downloadHeatmap", "Download Heatmap")
+    	downloadButton("downloadHeatmap", "Download Heatmap"),
+    	downloadButton("downloadClusteredInput", "Download Clustered Input File")
   	),
   
   mainPanel(
