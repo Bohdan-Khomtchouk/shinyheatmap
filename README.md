@@ -2,7 +2,7 @@
 
 # shinyheatmap
 
-<img src="https://user-images.githubusercontent.com/9893806/27997170-9c8f6cc2-64c0-11e7-8941-aae4b11619af.png">
+<img src="https://user-images.githubusercontent.com/9893806/34084712-02f8698a-e33a-11e7-86e7-ce60bf51fe86.png">
 
 ##### Web server for enormous biological heatmaps
 
