@@ -19,7 +19,6 @@ ui <- shinyUI(pageWithSidebar(
     	downloadButton("downloadSmallData", label = "Download Small Input Sample File"),
     	downloadButton("downloadMidData", label = "Download Mid-Sized Input Sample File"),
     	downloadButton("downloadHugeData", label = "Download Huge Input Sample File"),
-      helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
     	fileInput("filename", "Choose File to Upload:", accept = c('.csv')),
     	selectInput("lowColor", "Low Value:", c("green", "blue", "purple", "red", "orange", "yellow", "white")),
     	selectInput("highColor", "High Value:", c("red", "orange", "yellow", "green", "blue", "purple", "white")),    
@@ -33,7 +32,9 @@ ui <- shinyUI(pageWithSidebar(
     	sliderInput("xfontsize", "Choose Y Font Size:", min = 0.3, max = 2, value = 0.5),
     	sliderInput("yfontsize", "Choose X Font Size:", min = 0.3, max = 2, value = 0.72),
     	downloadButton("downloadHeatmap", "Download Heatmap"),
-    	downloadButton("downloadClusteredInput", "Download Clustered Input File")
+    	downloadButton("downloadClusteredInput", "Download Clustered Input File"),
+      helpText(a("View shinyheatmap publication!", href = "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176334", target = "_blank")),
+      helpText(a("View source code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank"))
   	),
   
   mainPanel(
