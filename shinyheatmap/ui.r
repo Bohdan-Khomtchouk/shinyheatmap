@@ -43,7 +43,7 @@ ui <- shinyUI(pageWithSidebar(
   					".shiny-output-error:before { visibility: hidden; }"
 			  ),
     tabsetPanel(
-      tabPanel("Instructions", textOutput("text1"), img(src='excel.png'), textOutput("text2"), textOutput("text3"), textOutput("text4"), textOutput("text5")),
+      tabPanel("Instructions", textOutput("text1"), img(src='excel.png'), textOutput("text2"), textOutput("text3"), img(src='benchmarks.png', width="80%", height="80%"), textOutput("text4"), textOutput("text5")),
       tabPanel("Static Heatmap", uiOutput(outputId = "image"), uiOutput("sorry"), plotOutput("static", height = "600px")),
       tabPanel("Interactive Heatmap", uiOutput(outputId = "image2"), uiOutput("sorry2"), plotlyOutput("interactive", height = "700px"))
 	  ) 
