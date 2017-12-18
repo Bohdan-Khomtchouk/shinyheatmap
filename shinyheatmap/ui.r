@@ -12,13 +12,14 @@ library(tools)
 
 
 # frontend
-ui <- shinyUI(pageWithSidebar(         
+ui <- shinyUI(pageWithSidebar(
   headerPanel(h1("shinyheatmap", style = "font-family: 'Cyborg', cursive; font-weight: 500; line-height: 1.1; color: #FF0000;")),
   sidebarPanel(
-    	helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
+      img(src='shinyheatmap_logo.png', align = "left", width="50%", height="50%"),
     	downloadButton("downloadSmallData", label = "Download Small Input Sample File"),
     	downloadButton("downloadMidData", label = "Download Mid-Sized Input Sample File"),
     	downloadButton("downloadHugeData", label = "Download Huge Input Sample File"),
+      helpText(a("Click Here for the Source Code on Github!", href = "https://github.com/Bohdan-Khomtchouk/shinyheatmap", target = "_blank")),
     	fileInput("filename", "Choose File to Upload:", accept = c('.csv')),
     	selectInput("lowColor", "Low Value:", c("green", "blue", "purple", "red", "orange", "yellow", "white")),
     	selectInput("highColor", "High Value:", c("red", "orange", "yellow", "green", "blue", "purple", "white")),    
