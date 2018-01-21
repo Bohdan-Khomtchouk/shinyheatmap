@@ -1,4 +1,4 @@
-# Copyright (C) 2016-2017 Bohdan Khomtchouk
+# Copyright (C) 2016-2018 Bohdan Khomtchouk
 
 # This file is part of shinyheatmap.
 
