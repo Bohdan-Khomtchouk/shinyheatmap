@@ -15,7 +15,7 @@ library(tools)
 ui <- shinyUI(pageWithSidebar(
   headerPanel(h1("shinyheatmap", style = "font-family: 'Cyborg', cursive; font-weight: 500; line-height: 1.1; color: #FF0000;")),
   sidebarPanel(
-      img(src='shinyheatmap_logo.png', align = "left", width="50%", height="50%"),
+      img(src = 'shinyheatmap_logo.png', align = "left", width = "50%", height = "50%"),
     	downloadButton("downloadSmallData", label = "Download Small Input Sample File"),
     	downloadButton("downloadMidData", label = "Download Mid-Sized Input Sample File"),
     	downloadButton("downloadHugeData", label = "Download Huge Input Sample File"),
@@ -38,6 +38,7 @@ ui <- shinyUI(pageWithSidebar(
   	),
   
   mainPanel(
+    tags$head(includeScript("google-analytics.js")),
   	tags$style(type="text/css",
   					".shiny-output-error { visibility: hidden; }",
   					".shiny-output-error:before { visibility: hidden; }"
