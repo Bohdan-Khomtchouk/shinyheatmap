@@ -5,6 +5,6 @@ account: bohdankhomtchouk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 124881
-bundleId: 1243149
+bundleId: 1549703
 url: https://bohdankhomtchouk.shinyapps.io/shinyheatmap/
-when: 1519758498.68272
+when: 1534980096.70148
