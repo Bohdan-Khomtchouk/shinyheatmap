@@ -18,7 +18,7 @@ Khomtchouk BB, Hennessy JR, Wahlestedt C: "shinyheatmap: Ultra fast low memory h
 
 ## Funding
 
-`shinyheatmap` was financially supported (2014-2017) by the United States Department of Defense (DoD) through the National Defense Science and Engineering Graduate Fellowship (NDSEG) Program. This research was conducted with Government support under and awarded by DoD, Army Research Office (ARO), National Defense Science and Engineering Graduate (NDSEG) Fellowship, 32 CFR 168a.
+`shinyheatmap` was originally financially supported (2014-2017) by the United States Department of Defense (DoD) through the National Defense Science and Engineering Graduate Fellowship (NDSEG) Program. This research was conducted with Government support under and awarded by DoD, Army Research Office (ARO), National Defense Science and Engineering Graduate (NDSEG) Fellowship, 32 CFR 168a.
 
 ## Usage (for general public)
 
@@ -50,3 +50,24 @@ Khomtchouk BB, Hennessy JR, Wahlestedt C: "shinyheatmap: Ultra fast low memory h
 
 ## Presentation
 `shinyheatmap` was presented at the Bay Area R User Group (BARUG) Meeting, which was held at Intuit Building 9 – Invention and Innovation, Mountain View, CA.  Slides available here: https://github.com/joseph-rickert/BARUG/blob/master/Bohdan-Khomtchouk_BARUG_November-2017.pptx
+
+## Contact
+
+You are welcome to:
+
+* submit suggestions and bug-reports at: <https://github.com/Bohdan-Khomtchouk/shinyheatmap/issues>
+* send a pull request on: <https://github.com/Bohdan-Khomtchouk/shinyheatmap>
+* compose an e-mail to: <bohdan@uchicago.edu>
+
+## Code of conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+## Future plans
+
+- [x] Outperform all state-of-the-art heatmap software (https://doi.org/10.1371/journal.pone.0176334.g004)
+- [x] Retain the (comfortable) lead
+- [x] Add [search functionality](https://github.com/Bohdan-Khomtchouk/fastheatmap/issues/6)
+- [ ] Add high performance hierarchical clustering
+- [ ] Add a desktop anchor view (i.e., having a "satellite" view when zooming in would be of great help on desktop screens.  In CytoscapeWeb or Cytoscape network visualization tools, for example, when users zoom in/out there is always a small window showing the big picture of the network at its higher level and a rectangle highlighting the region where users zoomed in)
+- [ ] Add augmented reality enabled views that can break the heatmap out of a user's desktop directly into the user's spatial environment (work in progress: https://github.com/HeatmapDojo/ar-heatmap)
